@@ -29,8 +29,7 @@ Yasmin Cristina Carvalho Mayer - RM: 573964
 ----
 
 ## Fluxo do Sistema 
- 
-*  Usuário informa tipo de conta (comum/premium), potência do carregador, bateria inicial e limite desejado.
+* Usuário informa tipo de conta (comum/premium), potência do carregador, bateria inicial e limite desejado.
 
 * Sistema inicia a recarga e mostra progresso em tempo real.
 
@@ -38,6 +37,18 @@ Yasmin Cristina Carvalho Mayer - RM: 573964
 
 * No modo balanceamento, permite conectar/desconectar veículos e redistribui potência automaticamente.
 ---
+
+## Arquitetura do Sistema
+
+* Usuário informa tipo de conta (comum/premium), potência do carregador, bateria inicial e limite desejado.
+
+* Sistema inicia a recarga e mostra progresso em tempo real.
+
+* Ao final, gera recibo com energia total, custo e tempo.
+
+* No modo balanceamento, permite conectar/desconectar veículos e redistribui potência automaticamente.
+
+
 ## Principais Funcionalidades
 * Recarga individual → lógica original intacta.
 
@@ -59,5 +70,13 @@ Sprint 02 → evolução: balanceamento de múltiplos veículos no terminal.
 * algorithm.py → lógica principal (recarga + balanceamento).
 
 * simulator.py → interface gráfica Tkinter (recarga individual).
+-- 
+## Justificativas Técnicas
+
+Python: linguagem versátil e acessível para simulações.
+
+Terminal interativo: simplicidade e portabilidade, sem dependência gráfica.
+
+Modularidade: funções separadas (executar_recarga, balancear, exibir_rede) facilitam manutenção e evolução.
 
 
